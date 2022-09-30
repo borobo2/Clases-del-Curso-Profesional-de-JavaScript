@@ -52,7 +52,8 @@ let imprimirDinero = console.log(`Dinero Real: ${dineroAhorrado - deudas}`);
 
 // parte A
 
-const nombreYSobreNombre = function (name, lastname, nickname) {
+const nombreYSobreNombre = function (name, lastname, nickname) {  // Imprimir nombre, apellido y sobrenombre en consola
+
     console.log(`mi nombre es ${name} ${lastname}, pero prefiero que me digas ${nickname}`)
 };
 nombreYSobreNombre("Nicolás", "Fernando", "Chubi");
@@ -71,28 +72,40 @@ nombreYSobreNombre("Nicolás", "Fernando", "Chubi");
 
 // Parte A
 
-let tipoDeSuscripcion;
+const tipoDeSuscripcion = (suscripcion) => { // Seleccionar el tipo de suscripción del usuario 
 
-tipoDeSuscripcion = "Free"
-
-if(tipoDeSuscripcion == "Free"){
-    console.log("Solo podes tomar los cursos gratis");
+    if(suscripcion === "Free"){
+        console.log("Solo podes tomar los cursos gratis");
+    }
+    else if(suscripcion === "Basic"){
+        console.log("Podes tomar casi todos los cursos de Platzi durante un mes");
+    }
+    else if(suscripcion === "Expert"){
+        console.log("podes tomar casi todos los cursos de Platzi durante un año");
+    }
+    else if(suscripcion === "ExpertPlus"){
+        console.log("Vos y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    }
+    else{
+        console.log("Se ha vencido la fecha de pago");
+    }
 }
 
-tipoDeSuscripcion = "Basic";
+tipoDeSuscripcion("Basic");
 
-if(tipoDeSuscripcion == "Basic"){
-    console.log("Podes tomar casi todos los cursos de Platzi durante un mes");
+// Parte B
+
+const mostrarSuscripciones = () => { // Mostrar todas las opciones de suscripción del usuario
+    const suscripcion = ["Free", "Basic", "Expert", "ExpertPlus"];
+    const mensajeDeSuscripcion = [
+    "Solo podes tomar los cursos gratis",
+    "Podes tomar casi todos los cursos de Platzi durante un mes",
+    "Podes tomar casi todos los cursos de Platzi durante un año",
+    "Vos y alguien más pueden tomar TODOS los cursos de Platzi durante un año"]
+
+    for(let i = 0; i < suscripcion.length; i++) {
+        console.log(`Tu suscripción es ${suscripcion[i]}, por ende ${mensajeDeSuscripcion[i]}`);
+    }
 }
 
-tipoDeSuscripcion = "Expert";
-
-if(tipoDeSuscripcion == "Expert"){
-    console.log("podes tomar casi todos los cursos de Platzi durante un año");
-}
-
-tipoDeSuscripcion = "ExpertPlus";
-
-if(tipoDeSuscripcion == "ExpertPlus"){
-    console.log("Vos y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
-}
+mostrarSuscripciones();
