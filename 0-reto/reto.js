@@ -109,3 +109,46 @@ const mostrarSuscripciones = () => { // Mostrar todas las opciones de suscripci�
 }
 
 mostrarSuscripciones();
+
+/*
+    Ciclos:
+        a. Un ciclo es un bloque de código que se ejecuta una determinada cantidad de veces hasta que se cumple
+           una condición
+        b. Ciclo for, while y do while. Los ciclos for in y for of son para recorrer objetos tipo array
+        c. Un bucle infito es un estado del bucle en el que nunca deja de iterar ya que no tiene una condición definida o está nunca
+           se cumple.
+        d. Se pueden mezclar ciclos y condicionales.
+*/
+
+// Parte A
+
+let i = 0;
+
+while(i < 5){
+    console.log(`El valor de i es: ${i}`);
+    i++;
+}
+
+i = 10;
+
+while(i >= 2){
+    console.log(`El valor de i es: ${i}`);
+    i = i - 1;
+}
+
+// Parte B
+
+const respuestaDelAcertijo = () => {
+    let acertijo = prompt("¿Cuanto es 2 + 2?");
+    let respuestaUsuario = parseInt(acertijo);
+    switch(respuestaUsuario){
+        case 4:
+            alert(`Excelente Respuesta, 2 + 2 es 4`);
+            break;
+        default:
+            alert("Respuesta incorrecta, vuelva a intentarlo");  
+            respuestaDelAcertijo();
+    }
+}
+
+respuestaDelAcertijo();
