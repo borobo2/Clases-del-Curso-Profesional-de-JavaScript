@@ -14,11 +14,11 @@
    
 */
 
-const title = document.querySelector("h1");
-const paragraph = document.querySelector(".parrafo-class");
-const paragraphsId = document.querySelector("#parrafo-id");
-const input = document.getElementById("input-id");
-const parrafos = document.querySelectorAll("p");
+let title = document.querySelector("h1");
+let paragraph = document.querySelector(".parrafo-class");
+let paragraphsId = document.querySelector("#parrafo-id");
+let input = document.getElementById("input-id");
+let parrafos = document.querySelectorAll("p");
 const elementosHtml = {
     title,
     paragraph,
@@ -26,12 +26,39 @@ const elementosHtml = {
     input
 }
 
-console.log(title);
-console.log(parrafos);
-console.log(elementosHtml); 
-console.log(input.value);
+console.log(title); // mostrar código html
+console.log(parrafos); // almacenar elementos en array
+console.log(elementosHtml); // mostrar elementos como objetos 
 
-/* Comportamiento de los metodos
-Los elementos html guardados en variables muestran el código html 
+// modificar contenido del elemento
+title.innerHTML = "DOMCITO <br /> DOMDOM";
 
-Los elementos html guardados en objetos permiten acceder a todas sus propiedades y valores */
+// modificar texto del documento
+title.innerText = "DOMCITO DOMDOM";
+
+// obtener el valor del atributo
+let paragraphAtribute = paragraph.getAttribute("class");
+console.log(paragraphAtribute);
+
+// establecer el valor del atributo
+paragraphAtribute = paragraph.setAttribute("class", "hol");
+console.log(paragraphAtribute);
+
+// agregar valores al atributo class
+title.classList.add("main__title");
+paragraph.classList.add("main__paragraph");
+
+// quitar valores al atributo class
+paragraph.classList.remove("caca");
+input.value = "Hola";
+
+/* Crear elemento html: */
+
+// Paso 1: Crear el elemento
+const etiquetaSpan = document.createElement("span");
+etiquetaSpan.innerText = "Buen día mono";
+
+// Paso 2: Agregarlo tomando como referencia la ubicación de una etiqueta especifica
+paragraphsId.append(etiquetaSpan);
+
+
