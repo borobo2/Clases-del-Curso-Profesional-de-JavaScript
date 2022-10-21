@@ -30,7 +30,7 @@ console.log(title); // mostrar código html
 console.log(parrafos); // almacenar elementos en array
 console.log(elementosHtml); // mostrar elementos como objetos 
 
-// modificar contenido del elemento
+// modificar etiqueta del elemento (contenido, etiquetas, atributos)
 title.innerHTML = "DOMCITO <br /> DOMDOM";
 
 // modificar texto del documento
